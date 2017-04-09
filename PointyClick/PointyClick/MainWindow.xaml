@@ -7,15 +7,33 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1000">
     <Grid>
-        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="568,170,0,0"/>
-        <Image x:Name="pm_by_pcs_png" Margin="10,10,781,652" Source="pm-by-pcs.png" Stretch="Fill"/>
-        <DataGrid x:Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="41,170,0,0" ItemsSource="{Binding}" AutoGenerateColumns="True" />
         <Button x:Name="loadCSV" Content="Browse" HorizontalAlignment="Left" Height="21" Margin="364,144,0,0" VerticalAlignment="Top" Width="63" Click="loadCSV_Click"/>
         <TextBox x:Name="filePath" HorizontalAlignment="Left" Height="21" Margin="94,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="21" Margin="41,144,0,0" TextWrapping="Wrap" Text="File Path:" VerticalAlignment="Top" Width="48"/>
         <Button x:Name="button1" Content="Import" HorizontalAlignment="Left" Height="26" Margin="843,723,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="pm_by_pcs_png" Margin="10,10,781,652" Source="pm-by-pcs.png" Stretch="Fill"/>
 
+        <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="568,170,0,0"
+                  IsReadOnly="True"
+                  AutoGenerateColumns="True"
+                  CanUserSortColumns="False"/>
 
+        <DataGrid x:Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="41,170,0,0" 
+                  AutoGenerateColumns="True" 
+                  CanUserSortColumns="False"
+                  IsSynchronizedWithCurrentItem="True"
+                  IsReadOnly="True"
+                  SelectionUnit="Cell"/>
 
     </Grid>
+
+    <Window.Resources>
+        <Style TargetType="DataGridColumnHeader">
+            <EventSetter Event="Click" Handler="columnHeaderClick"/>
+        </Style>
+        <Style TargetType="DataGridCell">
+            <EventSetter Event="MouseDown" Handler="cellClick"/>
+        </Style>
+    </Window.Resources>
+
 </Window>

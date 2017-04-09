@@ -7,6 +7,8 @@ using System.IO;
 using System.Windows.Forms;
 using FirebirdSql.Data.FirebirdClient;
 using Dapper;
+using System.Windows.Controls.Primitives;
+using System.Windows.Controls;
 
 namespace PointyClick
 {
@@ -27,6 +29,7 @@ namespace PointyClick
             using (FbConnection con = new FbConnection(connectionString))
             {
                 var Query = "SELECT rdb$relation_name AS PostalMate FROM rdb$relations WHERE rdb$view_blr is null AND (rdb$system_flag is null or rdb$system_flag = 0) ORDER BY rdb$relation_name ASC ";
+                //var Query2 = "SELECT * FROM Product";
                 var dataAdapter = new FbDataAdapter(Query, con);
                 var commandBuilder = new FbCommandBuilder(dataAdapter);
                 DataTable dt = new DataTable();
@@ -62,5 +65,44 @@ namespace PointyClick
                 }
             }
         }
+
+        private void columnHeaderClick(object sender, RoutedEventArgs e)
+        {
+            var columnHeader = sender as DataGridColumnHeader;
+            if (columnHeader != null)
+            {
+                dataGrid2.SelectedCells.Clear();
+                foreach (var item in dataGrid2.Items)
+                {
+                    dataGrid2.SelectedCells.Add(new DataGridCellInfo(item, columnHeader.Column));
+                }
+            }
+        }
+
+        private void cellClick(object sender, RoutedEventArgs e)
+        {
+            var cellInfo = dataGrid2.SelectedCells[0];
+            var content = cellInfo.Column.GetCellContent(cellInfo.Item);
+
+            string myQuery = "SELECT * FROM " + content;
+
+            string connectionString = "User=SYSDBA; Password=3k7rur9e; Database=PCS; DataSource=localhost; Port=3050;";
+
+            dataGrid1.Columns.Clear();
+            dataGrid1.Items.Clear();
+            dataGrid1.Items.Refresh();
+
+            using (FbConnection con = new FbConnection(connectionString))
+            {
+           
+                var dataAdapter = new FbDataAdapter(myQuery, con);
+                var commandBuilder = new FbCommandBuilder(dataAdapter);
+                DataTable dt = new DataTable();
+                dataAdapter.Fill(dt);
+                dataGrid1.ItemsSource = dt.DefaultView;
+            }
+
+        }
+
     }
 }
