@@ -21,6 +21,7 @@ namespace PointyClick
             fillPostalMate();
         }
 
+        // Connects to PostalMates Database and querys all the table names
         private void fillPostalMate()
         {
 
@@ -38,6 +39,7 @@ namespace PointyClick
             }
         }
 
+        // Reads in a .csv file and stores contents in a datatable
         private DataTable ReadCSV(string fileName)
         {
             DataTable dt = new DataTable("Data");
@@ -55,6 +57,7 @@ namespace PointyClick
             return dt;
         }
 
+        //Browse button opens a file explorer and allows user to select a .csv file
         private void loadCSV_Click(object sender, System.EventArgs e)
         {
             using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "CSV|*.csv", ValidateNames = true, Multiselect = false })
@@ -66,6 +69,8 @@ namespace PointyClick
             }
         }
 
+        //Event when double clicking a column header, the whole column gets highlighted
+        //Currently has a bugs, needs work.
         private void columnHeaderClick(object sender, RoutedEventArgs e)
         {
             var columnHeader = sender as DataGridColumnHeader;
@@ -79,6 +84,8 @@ namespace PointyClick
             }
         }
 
+         /*NEEDS WORK. Event when double clicking a table name, it opens and displays the content of the table
+        Currently causes the application to crash
         private void cellClick(object sender, RoutedEventArgs e)
         {
             var cellInfo = dataGrid2.SelectedCells[0];
@@ -103,6 +110,6 @@ namespace PointyClick
             }
 
         }
-
+        */
     }
 }

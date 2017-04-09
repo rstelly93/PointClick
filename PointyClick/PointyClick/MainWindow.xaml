@@ -8,7 +8,7 @@
         Title="MainWindow" Height="800" Width="1000">
     <Grid>
         <Button x:Name="loadCSV" Content="Browse" HorizontalAlignment="Left" Height="21" Margin="364,144,0,0" VerticalAlignment="Top" Width="63" Click="loadCSV_Click"/>
-        <TextBox x:Name="filePath" HorizontalAlignment="Left" Height="21" Margin="94,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265"/>
+        <TextBox x:Name="filePath" HorizontalAlignment="Left" Height="21" Margin="94,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" IsReadOnly="True"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="21" Margin="41,144,0,0" TextWrapping="Wrap" Text="File Path:" VerticalAlignment="Top" Width="48"/>
         <Button x:Name="button1" Content="Import" HorizontalAlignment="Left" Height="26" Margin="843,723,0,0" VerticalAlignment="Top" Width="111"/>
         <Image x:Name="pm_by_pcs_png" Margin="10,10,781,652" Source="pm-by-pcs.png" Stretch="Fill"/>
