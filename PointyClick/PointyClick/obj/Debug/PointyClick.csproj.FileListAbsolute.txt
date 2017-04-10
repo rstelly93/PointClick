@@ -16,16 +16,12 @@ c:\users\richard\documents\visual studio 2015\Projects\PointyClick\PointyClick\o
 c:\users\richard\documents\visual studio 2015\Projects\PointyClick\PointyClick\obj\Debug\PointyClick.csproj.GenerateResource.Cache
 c:\users\richard\documents\visual studio 2015\Projects\PointyClick\PointyClick\obj\Debug\PointyClick.exe
 c:\users\richard\documents\visual studio 2015\Projects\PointyClick\PointyClick\obj\Debug\PointyClick.pdb
-C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\PointyClick.exe.config
-C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.exe
-C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.pdb
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\PointyClick.exe
-C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\PointyClick.pdb
-C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\Dapper.dll
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\PointyClick.exe.config
+C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\Dapper.dll
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\Dapper.xml
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\FirebirdSql.Data.FirebirdClient.pdb
-C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.csprojResolveAssemblyReference.cache
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\MainWindow.g.cs
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\App.g.cs
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick_MarkupCompile.cache
@@ -34,3 +30,7 @@ C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\M
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.g.resources
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.Properties.Resources.resources
 C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.csproj.GenerateResource.Cache
+C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.exe
+C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.pdb
+C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\bin\Debug\PointyClick.pdb
+C:\Users\Richard\Documents\GitHub\PointClick\PointyClick\PointyClick\obj\Debug\PointyClick.csprojResolveAssemblyReference.cache

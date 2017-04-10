@@ -29,10 +29,7 @@
 
     <Window.Resources>
         <Style TargetType="DataGridColumnHeader">
-            <EventSetter Event="Click" Handler="columnHeaderClick"/>
-        </Style>
-        <Style TargetType="DataGridCell">
-            <EventSetter Event="MouseDown" Handler="cellClick"/>
+            <EventSetter Event="MouseDoubleClick" Handler="columnHeaderDoubleClick"/>
         </Style>
     </Window.Resources>
 

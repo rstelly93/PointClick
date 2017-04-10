@@ -71,7 +71,7 @@ namespace PointyClick
 
         //Event when double clicking a column header, the whole column gets highlighted
         //Currently has a bugs, needs work.
-        private void columnHeaderClick(object sender, RoutedEventArgs e)
+        private void columnHeaderDoubleClick(object sender, RoutedEventArgs e)
         {
             var columnHeader = sender as DataGridColumnHeader;
             if (columnHeader != null)
@@ -82,34 +82,6 @@ namespace PointyClick
                     dataGrid2.SelectedCells.Add(new DataGridCellInfo(item, columnHeader.Column));
                 }
             }
-        }
-
-         /*NEEDS WORK. Event when double clicking a table name, it opens and displays the content of the table
-        Currently causes the application to crash
-        private void cellClick(object sender, RoutedEventArgs e)
-        {
-            var cellInfo = dataGrid2.SelectedCells[0];
-            var content = cellInfo.Column.GetCellContent(cellInfo.Item);
-
-            string myQuery = "SELECT * FROM " + content;
-
-            string connectionString = "User=SYSDBA; Password=3k7rur9e; Database=PCS; DataSource=localhost; Port=3050;";
-
-            dataGrid1.Columns.Clear();
-            dataGrid1.Items.Clear();
-            dataGrid1.Items.Refresh();
-
-            using (FbConnection con = new FbConnection(connectionString))
-            {
-           
-                var dataAdapter = new FbDataAdapter(myQuery, con);
-                var commandBuilder = new FbCommandBuilder(dataAdapter);
-                DataTable dt = new DataTable();
-                dataAdapter.Fill(dt);
-                dataGrid1.ItemsSource = dt.DefaultView;
-            }
-
-        }
-        */
+        } 
     }
 }
