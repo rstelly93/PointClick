@@ -9,6 +9,13 @@ using FirebirdSql.Data.FirebirdClient;
 using Dapper;
 using System.Windows.Controls.Primitives;
 using System.Windows.Controls;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Reflection;
+using System.Windows.Input;
+using System.Windows.Media;
+
 
 namespace PointyClick
 {
@@ -69,6 +76,27 @@ namespace PointyClick
             }
         }
 
+        //Import makes a datatable with the column of selected cell
+        private void import_Click(object sender, System.EventArgs e)
+        {
+            // First check so that we´ve only got one clicked cell
+            if (dataGrid2.SelectedCells.Count != 1)
+                return;
+
+            // Then fetch the column header
+            string selectedColumnHeader = (string)dataGrid2.SelectedCells[0].Column.Header;
+            
+            //Make Datatable with only column
+            DataTable dt = new DataTable();
+            dt = ((DataView)dataGrid2.ItemsSource).ToTable();
+            DataView dv = new DataView(dt);
+
+            DataTable dt2 = dv.ToTable(false, selectedColumnHeader);
+            dataGrid3.ItemsSource = dt2.AsDataView();
+
+        }
+
+
         //Event when double clicking a column header, the whole column gets highlighted
         //Currently has a bugs, needs work.
         private void columnHeaderDoubleClick(object sender, RoutedEventArgs e)
@@ -82,6 +110,22 @@ namespace PointyClick
                     dataGrid2.SelectedCells.Add(new DataGridCellInfo(item, columnHeader.Column));
                 }
             }
-        } 
+        }
+
+        //Event to select column header when header checkbox clicked
+        private void mouseDownEventHandler(object sender, RoutedEventArgs e)
+        {
+            DependencyObject dep = (DependencyObject)e.OriginalSource;
+            while ((dep != null) && !(dep is DataGridColumnHeader))
+            {
+                dep = VisualTreeHelper.GetParent(dep);
+            }
+            if (dep == null) return;
+            if (dep is DataGridColumnHeader)
+            {
+                System.Windows.Forms.MessageBox.Show(((DataGridColumnHeader)dep).Content.ToString());
+            }
+        }
+
     }
 }
