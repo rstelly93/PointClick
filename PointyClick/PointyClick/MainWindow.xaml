@@ -16,22 +16,26 @@
 
 
         <!-- Datagrid that PostalMate's database is displayed-->
-        <DataGrid Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="584,170,0,0"
+        <DataGrid Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="220" Margin="734,170,0,0"
                   IsReadOnly="True"
                   AutoGenerateColumns="True"
-                  CanUserSortColumns="False">
+                  CanUserSortColumns="False"
+                  CanUserResizeColumns="False" 
+                  CanUserResizeRows="False">
             <DataGrid.Resources>
 
             </DataGrid.Resources>
         </DataGrid>
 
         <!-- Datagrid that users .CSV is displayed-->
-        <DataGrid Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="25,170,0,0" 
+        <DataGrid Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="433" Margin="25,170,0,0" 
                   AutoGenerateColumns="True" 
                   CanUserSortColumns="False"
                   IsSynchronizedWithCurrentItem="True"
                   IsReadOnly="True"
-                  SelectionUnit="Cell">
+                  SelectionUnit="Cell"
+                  CanUserResizeColumns="False" 
+                  CanUserResizeRows="False">
             <DataGrid.Resources>
                 <Style TargetType="DataGridColumnHeader">
                     <EventSetter Event="MouseDoubleClick" Handler="columnHeaderDoubleClick"/>
@@ -44,10 +48,12 @@
 
 
         <!-- Middle Datagrid-->
-        <DataGrid Name="dataGrid3" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="131" Margin="432,170,0,0" 
+        <DataGrid Name="dataGrid3" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="220" Margin="489,170,0,0" 
                   CanUserSortColumns="False"
                   IsSynchronizedWithCurrentItem="True"
-                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="CellOrRowHeader">
+                  IsReadOnly="True" SelectionMode="Single" SelectionUnit="CellOrRowHeader"
+                  CanUserResizeColumns="False" 
+                  CanUserResizeRows="False">
             <!--
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader" >
