@@ -16,7 +16,7 @@
 
 
         <!-- Datagrid that PostalMate's database is displayed-->
-        <DataGrid Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="568,170,0,0"
+        <DataGrid Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="584,170,0,0"
                   IsReadOnly="True"
                   AutoGenerateColumns="True"
                   CanUserSortColumns="False">
@@ -26,7 +26,7 @@
         </DataGrid>
 
         <!-- Datagrid that users .CSV is displayed-->
-        <DataGrid Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="41,170,0,0" 
+        <DataGrid Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="25,170,0,0" 
                   AutoGenerateColumns="True" 
                   CanUserSortColumns="False"
                   IsSynchronizedWithCurrentItem="True"
