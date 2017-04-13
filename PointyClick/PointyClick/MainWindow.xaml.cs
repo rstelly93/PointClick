@@ -37,7 +37,6 @@ namespace PointyClick
             using (FbConnection con = new FbConnection(connectionString))
             {
                 var Query = "SELECT rdb$relation_name AS PostalMate FROM rdb$relations WHERE rdb$view_blr is null AND (rdb$system_flag is null or rdb$system_flag = 0) ORDER BY rdb$relation_name ASC ";
-                //var Query2 = "SELECT * FROM Product";
                 var dataAdapter = new FbDataAdapter(Query, con);
                 var commandBuilder = new FbCommandBuilder(dataAdapter);
                 DataTable dt = new DataTable();

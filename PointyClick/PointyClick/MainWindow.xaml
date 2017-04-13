@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:PointyClick"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1000">
+<<<<<<< HEAD
     <Grid Margin="-14,0,-22,0">
         <Button x:Name="loadCSV" Content="Browse" HorizontalAlignment="Left" Height="21" Margin="348,144,0,0" VerticalAlignment="Top" Width="63" Click="loadCSV_Click"/>
         <TextBox x:Name="filePath" HorizontalAlignment="Left" Height="21" Margin="78,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" IsReadOnly="True"/>
@@ -14,10 +15,28 @@
         <Image x:Name="pm_by_pcs_png" Margin="10,10,781,652" Source="pm-by-pcs.png" Stretch="Fill"/>
 
         <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="604,185,0,0"
+=======
+
+    <Window.Resources>
+        
+    </Window.Resources>
+    
+    <Grid>
+        <Button x:Name="loadCSV" Content="Browse" HorizontalAlignment="Left" Height="21" Margin="364,144,0,0" VerticalAlignment="Top" Width="63" Click="loadCSV_Click"/>
+        <TextBox x:Name="filePath" HorizontalAlignment="Left" Height="21" Margin="94,144,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="265" IsReadOnly="True"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="21" Margin="41,144,0,0" TextWrapping="Wrap" Text="File Path:" VerticalAlignment="Top" Width="48"/>
+        <Button x:Name="button1" Content="Import" HorizontalAlignment="Left" Height="26" Margin="843,723,0,0" VerticalAlignment="Top" Width="111"/>
+        <Image x:Name="pm_by_pcs_png" Margin="10,10,781,652" Source="pm-by-pcs.png" Stretch="Fill"/>
+   
+        <!-- Datagrid that PostalMate's database is displayed-->
+        <DataGrid Name="dataGrid1" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="568,170,0,0"
+>>>>>>> origin/master
                   IsReadOnly="True"
                   AutoGenerateColumns="True"
-                  CanUserSortColumns="False"/>
+                  CanUserSortColumns="False">
+            <DataGrid.Resources>
 
+<<<<<<< HEAD
         <DataGrid x:Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="385" Margin="25,185,0,0" 
                   CanUserSortColumns="False"
                   IsSynchronizedWithCurrentItem="True"
@@ -37,13 +56,29 @@
             </DataGrid.ColumnHeaderStyle>
         </DataGrid>
         <DataGrid x:Name="dataGrid3" HorizontalAlignment="Left" Height="525" Margin="470,185,0,0" VerticalAlignment="Top" Width="80"/>
+=======
+            </DataGrid.Resources>
+        </DataGrid>
+
+        <!-- Datagrid that users .CSV is displayed-->
+        <DataGrid Name="dataGrid2" HorizontalAlignment="Left" Height="528" VerticalAlignment="Top" Width="386" Margin="41,170,0,0" 
+                  AutoGenerateColumns="True" 
+                  CanUserSortColumns="False"
+                  IsSynchronizedWithCurrentItem="True"
+                  IsReadOnly="True"
+                  SelectionUnit="Cell">
+            <DataGrid.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <EventSetter Event="MouseDoubleClick" Handler="columnHeaderDoubleClick"/>
+                </Style>
+                <!--<SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="#70767f"/>-->
+            </DataGrid.Resources>
+            <DataGrid.Columns>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+>>>>>>> origin/master
 
     </Grid>
-
-    <Window.Resources>
-        <Style TargetType="DataGridColumnHeader">
-            <EventSetter Event="MouseDoubleClick" Handler="columnHeaderDoubleClick"/>
-        </Style>
-    </Window.Resources>
 
 </Window>
